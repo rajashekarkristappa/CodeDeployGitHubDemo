@@ -1,13 +1,12 @@
 version: 0.0
 os: linux
 files:
-  - source: /home/ubuntu
-    destination: /tmp
+  - source:/tmp/CodeDeployGitHubDemo/sub/mytextfile.txt
+    destination: /tmp/CodeDeployGitHubDemo/sub/mySourcefile.rb
   - source: source
-    destination: /tmp
+    destination: /tmp/CodeDeployGitHubDemo/sub/mySourcefile.rb
 hooks:
-  BeforeInstall:
-    - location: /home/ubuntu
-    - location: 
+  BeforeInstall: 
+    - location: helloworld
   AfterInstall:
-    - location: /tmp
+    - location: helloworld good
